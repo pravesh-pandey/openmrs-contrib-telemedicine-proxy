@@ -2,13 +2,14 @@ from flask import Flask
 import requests
 from flask import request
 app = Flask(__name__)
+import os
 
 openmrs_host = 'http://refapp:8080/'
 idgen_path = 'openmrs/module/idgen/generateIdentifier.form?source=1&username=admin&password=Admin123'
 registeration_path ='openmrs/ws/rest/v1/patient'
 
-username= 'telemedtest3'
-password= 'Asdfg123'
+username = os.environ['MOBILE_USERNAME']
+password = os.environ['MOBILE_PASSWORD']
 
 
 @app.route('/fetch')
