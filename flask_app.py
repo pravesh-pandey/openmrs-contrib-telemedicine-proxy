@@ -15,7 +15,7 @@ password = os.environ['MOBILE_PASSWORD']
 @app.route('/fetch')
 def hello_world():
    response = requests.get(openmrs_host + idgen_path)
-   return (response.text)
+   return response.text, response.status_code
 
 @app.route('/register',methods=['POST'])
 def register_patient():
@@ -26,7 +26,7 @@ def register_patient():
       json=request.get_json(force=True)
    )
    
-   return response.text
+   return response.text, response.status_code
 
 
 if __name__ == '__main__':
