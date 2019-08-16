@@ -4,13 +4,13 @@ from flask import request
 app = Flask(__name__)
 import os
 
-openmrs_host = 'http://refapp:8080/'
-idgen_path = 'openmrs/module/idgen/generateIdentifier.form?source=1&username=admin&password=Admin123'
-registeration_path ='openmrs/ws/rest/v1/patient'
+
 
 username = os.environ['MOBILE_USERNAME']
 password = os.environ['MOBILE_PASSWORD']
-
+openmrs_host = 'http://refapp:8080/'
+idgen_path = 'openmrs/module/idgen/generateIdentifier.form?source=1&username={}&password={}'.format(username, password)
+registeration_path ='openmrs/ws/rest/v1/patient'
 
 @app.route('/fetch')
 def hello_world():
