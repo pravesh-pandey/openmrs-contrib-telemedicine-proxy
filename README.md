@@ -7,6 +7,6 @@ and [Gunicorn](https://gunicorn.org/) as the WSGI client.
 - fetch - For fetching the unique patient Uuid.
 - register - For registering the patient with user provided detail
 
-The proxy server runs inside a docker container in a python 3.6 environment. The container exposes `port 3000` to the host machine.
+The proxy server runs inside a docker container in a python 3.6 environment.The container exposes port 3000 to the host machine.
 This container is under use at the main fortitudo-infrastructure and is added to its docker-compose file.This proxy was specially designed 
 for the project [Nigeria Telemedicine App](https://github.com/openmrs/openmrs-contrib-telemedicine-app).
