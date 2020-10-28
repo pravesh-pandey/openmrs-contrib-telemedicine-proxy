@@ -1,6 +1,6 @@
 # Openmrs-contrib-telemedicine-proxy
 This repository contains a reverse proxy for the OpenMRS server. It helps increase security of the server from illegal access
-and other attempts to harm the server. The proxy has been developed using [Flask](https://flask.palletsprojects.com/en/1.0.x/) 
+and other attempts to harm the server. This proxy has been developed using [Flask](https://flask.palletsprojects.com/en/1.0.x/) 
 and [Gunicorn](https://gunicorn.org/) as the WSGI client. 
 <br>
 #### The Flask app has two endpoints 
